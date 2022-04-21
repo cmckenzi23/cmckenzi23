@@ -1,0 +1,56 @@
+public class BankDemo {
+
+	public class Account {
+		
+		private double balance; 
+		
+		public Account() {
+			
+			balance = 0.0;
+		}
+		
+		public void deposit (double amount) {
+			
+			balance = balance + amount;
+		}
+		
+		public void withdraw (double amount) {
+			
+			balance = balance - amount; 
+			
+		}
+		
+		public double getBalance()
+		{
+			return balance; 
+		}
+		
+	}
+
+}
+
+//Main Class
+public class BankMain {
+	
+	public static void main (String[] args) {
+		
+		Account customer1 = new Account();
+		
+		
+		customer1.deposit(200);
+		
+		Account customer2 = new Account();
+		
+		customer2.deposit(500);
+		
+		System.out.println("Customer 1 Balance = ");
+		System.out.println(customer1.getBalance());
+		System.out.println("Customer 2 Balance = ");
+		System.out.println(customer2.getBalance());
+		
+		
+	}
+	
+
+}
+
